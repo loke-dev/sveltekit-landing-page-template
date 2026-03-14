@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../lib/styles/app.css';
 	import NavBar from '$components/layout/NavBar.svelte';
+	import Footer from '$components/layout/Footer.svelte';
 	import type { Snippet } from 'svelte';
 
 	const { children }: { children: Snippet } = $props();
@@ -14,5 +15,4 @@
 	{@render children()}
 </main>
 
-<!-- Footer placeholder — replaced in Task 9 -->
-<footer></footer>
+<Footer />
