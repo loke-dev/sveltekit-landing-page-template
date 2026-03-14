@@ -13,6 +13,9 @@ const config = {
 			$components: 'src/lib/components',
 			$styles: 'src/lib/styles',
 			$utils: 'src/lib/utils'
+		},
+		prerender: {
+			handleMissingId: 'warn'
 		}
 	},
 	vitePlugin: {

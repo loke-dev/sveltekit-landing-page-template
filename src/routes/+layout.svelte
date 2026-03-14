@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../lib/styles/app.css';
+	import NavBar from '$components/layout/NavBar.svelte';
 	import type { Snippet } from 'svelte';
 
 	const { children }: { children: Snippet } = $props();
@@ -7,12 +8,11 @@
 
 <a href="#main" class="skip-link">Skip to main content</a>
 
-<!-- NavBar placeholder — will be replaced in Task 8 -->
-<header style="height:64px;"></header>
+<NavBar />
 
 <main id="main" style="padding-top:64px;">
 	{@render children()}
 </main>
 
-<!-- Footer placeholder — will be replaced in Task 9 -->
+<!-- Footer placeholder — replaced in Task 9 -->
 <footer></footer>
