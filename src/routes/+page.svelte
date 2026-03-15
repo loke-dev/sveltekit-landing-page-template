@@ -22,14 +22,13 @@
 	<meta property="og:url" content={SITE_URL} />
 	<meta property="og:title" content={TITLE} />
 	<meta property="og:description" content={DESCRIPTION} />
-	<!-- TODO: Add og-image.png to static/ before deploying (1200x630px recommended) -->
-	<!-- <meta property="og:image" content={OG_IMAGE} /> -->
+	<meta property="og:image" content={OG_IMAGE} />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={TITLE} />
 	<meta name="twitter:description" content={DESCRIPTION} />
-	<!-- <meta name="twitter:image" content={OG_IMAGE} /> -->
+	<meta name="twitter:image" content={OG_IMAGE} />
 
 	<!-- JSON-LD -->
 	<!-- eslint-disable svelte/no-at-html-tags, no-useless-escape -->
