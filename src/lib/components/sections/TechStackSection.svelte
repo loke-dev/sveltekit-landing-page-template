@@ -47,7 +47,7 @@
 <section class="section" aria-label="Built With">
 	<div class="section-container">
 		<div class="stack-inner" use:fadeIn>
-			<SectionLabel text="Built With" color="rgba(255,255,255,0.35)" />
+			<SectionLabel text="Built With" color="var(--color-text-subtle, #8d9bb3)" />
 			<div class="stack-badges" role="list">
 				{#each stack as tech (tech.label)}
 					<span role="listitem">

@@ -72,7 +72,7 @@
 
 	.btn-outline {
 		background: transparent;
-		color: rgba(255, 255, 255, 0.75);
+		color: var(--color-text-secondary, #b8c4d8);
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		backdrop-filter: blur(4px);
 	}

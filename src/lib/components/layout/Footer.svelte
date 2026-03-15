@@ -42,12 +42,12 @@
 	.footer-left,
 	.footer-right {
 		font-size: 0.8rem;
-		color: rgba(255, 255, 255, 0.35);
+		color: var(--color-text-subtle, #8d9bb3);
 		margin: 0;
 	}
 
 	.footer-left a {
-		color: rgba(255, 255, 255, 0.5);
+		color: var(--color-text-secondary, #b8c4d8);
 		text-decoration: none;
 		transition: color 0.2s;
 	}

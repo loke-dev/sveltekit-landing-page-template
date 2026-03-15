@@ -12,7 +12,7 @@
 <style>
 	.label {
 		font-family: var(--font-mono);
-		font-size: 0.68rem;
+		font-size: 0.75rem;
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
 		margin-bottom: 0.6rem;

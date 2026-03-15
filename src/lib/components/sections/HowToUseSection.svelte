@@ -172,7 +172,7 @@
 	.terminal-title {
 		margin-left: 0.5rem;
 		font-size: 0.75rem;
-		color: rgba(255, 255, 255, 0.35);
+		color: var(--color-text-subtle, #8d9bb3);
 		font-family: var(--font-mono);
 	}
 
@@ -190,7 +190,7 @@
 	}
 
 	.prompt {
-		color: rgba(255, 255, 255, 0.3);
+		color: var(--color-text-subtle, #8d9bb3);
 		margin-right: 0.5rem;
 	}
 	.cmd {

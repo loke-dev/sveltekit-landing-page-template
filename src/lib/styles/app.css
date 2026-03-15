@@ -9,6 +9,9 @@
 	--color-background: #030e29;
 	--color-background-faded: #101254;
 	--color-background-code: #001445;
+	/* WCAG AA on #030e29 (~4.5:1 normal text) */
+	--color-text-secondary: #b8c4d8;
+	--color-text-subtle: #8d9bb3;
 
 	/* Typography */
 	--font-sans: 'Inter', system-ui, sans-serif;

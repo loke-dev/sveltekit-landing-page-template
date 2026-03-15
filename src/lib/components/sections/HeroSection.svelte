@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from '$components/ui/Button.svelte';
+	import SectionLabel from '$components/ui/SectionLabel.svelte';
 	import { GITHUB_URL } from '$lib/config';
 
 	const particles = [
@@ -108,7 +109,7 @@
 	{/each}
 
 	<div class="hero-content">
-		<p class="hero-eyebrow" aria-label="Open Source Template">✦ Open Source Template ✦</p>
+		<SectionLabel color="var(--color-secondary)" text="✦ Open Source Template ✦" />
 
 		<h1 class="hero-headline">
 			The last landing page template<br />
@@ -201,15 +202,6 @@
 		max-width: 820px;
 	}
 
-	.hero-eyebrow {
-		font-family: var(--font-mono);
-		font-size: 0.68rem;
-		color: #ffba02;
-		letter-spacing: 0.22em;
-		text-transform: uppercase;
-		margin: 0;
-	}
-
 	.hero-headline {
 		font-size: clamp(2.4rem, 6vw, 5rem);
 		font-weight: 900;
@@ -220,7 +212,8 @@
 	}
 
 	.hero-gradient {
-		background: linear-gradient(135deg, #d91e53, #ffba02);
+		color: #ffc14d;
+		background: linear-gradient(135deg, #f04b7a, #ffc14d);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -228,7 +221,7 @@
 
 	.hero-subtext {
 		font-size: clamp(0.95rem, 2vw, 1.1rem);
-		color: rgba(255, 255, 255, 0.55);
+		color: var(--color-text-secondary, #b8c4d8);
 		max-width: 520px;
 		line-height: 1.65;
 		margin: 0;
@@ -272,7 +265,7 @@
 
 	.stat-label {
 		font-size: 0.65rem;
-		color: rgba(255, 255, 255, 0.45);
+		color: var(--color-text-subtle, #8d9bb3);
 		text-transform: uppercase;
 		letter-spacing: 0.06em;
 	}

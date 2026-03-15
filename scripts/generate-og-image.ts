@@ -76,14 +76,6 @@ const html = `<!DOCTYPE html>
       gap: 20px;
     }
 
-    .eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 13px;
-      color: #ffba02;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
-
     h1 {
       font-size: 72px;
       font-weight: 900;
@@ -194,7 +186,7 @@ const html = `<!DOCTYPE html>
 
   <!-- Main content -->
   <div class="content">
-    <p class="eyebrow">✦ Open Source Template ✦</p>
+    <SectionLabel color="var(--color-primary)" text="✦ Open Source Template ✦" />
     <h1>The last landing page<br/>template you'll <span class="gradient-text">ever need</span></h1>
     <p class="subtitle">SvelteKit 2 + Svelte 5 + Tailwind v4. Score 100 on Lighthouse.<br/>Deploy in 60 seconds. Free forever.</p>
 

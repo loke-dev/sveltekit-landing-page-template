@@ -6,7 +6,7 @@
 <section class="section" aria-labelledby="preview-heading">
 	<div class="section-container">
 		<div class="section-header" use:fadeIn>
-			<SectionLabel text="Live Preview" />
+			<SectionLabel color="var(--color-secondary)" text="Live Preview" />
 			<h2 id="preview-heading" class="section-title">See what you're getting.</h2>
 		</div>
 
@@ -42,7 +42,7 @@
 						style="bottom:22%;left:10%;color:rgba(75,46,198,0.5);animation-delay:4s;">export</span
 					>
 					<div class="mini-content">
-						<p class="mini-eyebrow">✦ Open Source Template ✦</p>
+						<SectionLabel color="var(--color-primary)" text="✦ Open Source Template ✦" />
 						<h3 class="mini-headline">
 							The last landing page template you'll <span class="mini-gradient">ever need</span>
 						</h3>
@@ -101,7 +101,7 @@
 		border-radius: 4px;
 		padding: 0.2rem 0.75rem;
 		font-size: 0.72rem;
-		color: rgba(255, 255, 255, 0.35);
+		color: var(--color-text-subtle, #8d9bb3);
 		font-family: var(--font-mono);
 	}
 
@@ -152,15 +152,6 @@
 		align-items: center;
 		gap: 0.75rem;
 		padding: 2rem;
-	}
-
-	.mini-eyebrow {
-		font-family: var(--font-mono);
-		font-size: 0.55rem;
-		color: #ffba02;
-		letter-spacing: 0.18em;
-		text-transform: uppercase;
-		margin: 0;
 	}
 
 	.mini-headline {

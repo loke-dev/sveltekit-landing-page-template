@@ -81,7 +81,13 @@
 	</nav>
 
 	<!-- Mobile menu -->
-	<div id="mobile-menu" class="mobile-menu" class:open={menuOpen} aria-hidden={!menuOpen}>
+	<div
+		id="mobile-menu"
+		class="mobile-menu"
+		class:open={menuOpen}
+		aria-hidden={!menuOpen}
+		inert={!menuOpen}
+	>
 		<ul role="list">
 			{#each navLinks as link (link.label)}
 				<li>
@@ -174,7 +180,7 @@
 	}
 
 	.nav-link {
-		color: rgba(255, 255, 255, 0.65);
+		color: var(--color-text-secondary, #b8c4d8);
 		text-decoration: none;
 		font-size: 0.9rem;
 		transition: color 0.2s;

@@ -51,7 +51,7 @@
 <section id="features" class="section" aria-labelledby="features-heading">
 	<div class="section-container">
 		<div class="section-header" use:fadeIn>
-			<SectionLabel text="Why This Template" />
+			<SectionLabel color="var(--color-primary)" text="Why This Template" />
 			<h2 id="features-heading" class="section-title">
 				Everything you need.<br />Nothing you don't.
 			</h2>

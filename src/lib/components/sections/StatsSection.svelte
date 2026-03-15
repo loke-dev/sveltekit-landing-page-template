@@ -12,13 +12,15 @@
 
 <section class="section stats-section" aria-label="By the Numbers">
 	<div class="section-container">
-		<SectionLabel text="By the Numbers" color="rgba(255,255,255,0.3)" />
+		<SectionLabel text="By the Numbers" color="var(--color-text-subtle, #8d9bb3)" />
 		<dl class="stats-grid" use:fadeIn>
 			{#each stats as stat (stat.label)}
 				<div class="stat-item">
 					<dt class="stat-name">{stat.label}</dt>
-					<dd class="stat-value" style="color:{stat.color}">{stat.value}</dd>
-					<span class="stat-sub">{stat.sublabel}</span>
+					<dd class="stat-block">
+						<span class="stat-value" style="color:{stat.color}">{stat.value}</span>
+						<span class="stat-sub">{stat.sublabel}</span>
+					</dd>
 				</div>
 			{/each}
 		</dl>
@@ -53,12 +55,19 @@
 		gap: 0.2rem;
 	}
 
+	.stat-block {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.2rem;
+		order: -1;
+	}
+
 	.stat-value {
 		font-size: clamp(1.8rem, 4vw, 2.5rem);
 		font-weight: 900;
 		line-height: 1;
-		margin: 0;
-		order: -1;
 	}
 
 	.stat-name {
@@ -69,6 +78,6 @@
 
 	.stat-sub {
 		font-size: 0.7rem;
-		color: rgba(255, 255, 255, 0.35);
+		color: var(--color-text-subtle, #8d9bb3);
 	}
 </style>
