@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* ─── Design Tokens ─────────────────────────────── */
 @theme {
@@ -11,8 +11,8 @@
 	--color-background-code: #001445;
 
 	/* Typography */
-	--font-sans: "Inter", system-ui, sans-serif;
-	--font-mono: "JetBrains Mono", "Fira Code", monospace;
+	--font-sans: 'Inter', system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
 	/* Animations */
 	--animate-gradient-shift: gradient-shift 8s ease infinite;
@@ -60,8 +60,10 @@
 		box-sizing: border-box;
 	}
 
-	html {
-		scroll-behavior: smooth;
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			scroll-behavior: smooth;
+		}
 	}
 
 	body {

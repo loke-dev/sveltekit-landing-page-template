@@ -1,41 +1,110 @@
 <script lang="ts">
 	import Button from '$components/ui/Button.svelte';
-
-	const GITHUB_URL =
-		'https://github.com/loke-dev/sveltekit-mdsvex-landing-page-template';
+	import { GITHUB_URL } from '$lib/config';
 
 	const particles = [
-		{ content: 'const',    pos: 'top:14%;left:7%',       delay: '0s',   rot: '-13deg', opacity: 0.55, color: 'rgba(217,30,83,0.65)' },
-		{ content: 'async',    pos: 'top:22%;right:9%',      delay: '2.2s', rot: '9deg',   opacity: 0.45, color: 'rgba(255,186,2,0.55)' },
-		{ content: 'export',   pos: 'bottom:28%;left:11%',   delay: '4s',   rot: '6deg',   opacity: 0.45, color: 'rgba(75,46,198,0.6)' },
-		{ content: '() =>',    pos: 'top:42%;right:14%',     delay: '1.1s', rot: '-5deg',  opacity: 0.4,  color: 'rgba(96,165,250,0.55)' },
-		{ content: 'return',   pos: 'bottom:18%;right:7%',   delay: '3.1s', rot: '11deg',  opacity: 0.38, color: 'rgba(74,222,128,0.5)' },
-		{ content: 'import',   pos: 'top:8%;left:28%',       delay: '5s',   rot: '-9deg',  opacity: 0.3,  color: 'rgba(217,30,83,0.4)' },
-		{ content: 'await',    pos: 'bottom:38%;right:22%',  delay: '2.6s', rot: '7deg',   opacity: 0.4,  color: 'rgba(255,186,2,0.45)' },
-		{ content: 'type',     pos: 'top:58%;left:4%',       delay: '1.5s', rot: '-4deg',  opacity: 0.35, color: 'rgba(167,139,250,0.5)' },
-		{ content: 'function', pos: 'bottom:50%;left:18%',   delay: '6s',   rot: '3deg',   opacity: 0.28, color: 'rgba(96,165,250,0.4)' },
-		{ content: '$state',   pos: 'top:32%;left:3%',       delay: '3.7s', rot: '-7deg',  opacity: 0.35, color: 'rgba(255,186,2,0.4)' },
+		{
+			content: 'const',
+			pos: 'top:14%;left:7%',
+			delay: '0s',
+			rot: '-13deg',
+			opacity: 0.55,
+			color: 'rgba(217,30,83,0.65)'
+		},
+		{
+			content: 'async',
+			pos: 'top:22%;right:9%',
+			delay: '2.2s',
+			rot: '9deg',
+			opacity: 0.45,
+			color: 'rgba(255,186,2,0.55)'
+		},
+		{
+			content: 'export',
+			pos: 'bottom:28%;left:11%',
+			delay: '4s',
+			rot: '6deg',
+			opacity: 0.45,
+			color: 'rgba(75,46,198,0.6)'
+		},
+		{
+			content: '() =>',
+			pos: 'top:42%;right:14%',
+			delay: '1.1s',
+			rot: '-5deg',
+			opacity: 0.4,
+			color: 'rgba(96,165,250,0.55)'
+		},
+		{
+			content: 'return',
+			pos: 'bottom:18%;right:7%',
+			delay: '3.1s',
+			rot: '11deg',
+			opacity: 0.38,
+			color: 'rgba(74,222,128,0.5)'
+		},
+		{
+			content: 'import',
+			pos: 'top:8%;left:28%',
+			delay: '5s',
+			rot: '-9deg',
+			opacity: 0.3,
+			color: 'rgba(217,30,83,0.4)'
+		},
+		{
+			content: 'await',
+			pos: 'bottom:38%;right:22%',
+			delay: '2.6s',
+			rot: '7deg',
+			opacity: 0.4,
+			color: 'rgba(255,186,2,0.45)'
+		},
+		{
+			content: 'type',
+			pos: 'top:58%;left:4%',
+			delay: '1.5s',
+			rot: '-4deg',
+			opacity: 0.35,
+			color: 'rgba(167,139,250,0.5)'
+		},
+		{
+			content: 'function',
+			pos: 'bottom:50%;left:18%',
+			delay: '6s',
+			rot: '3deg',
+			opacity: 0.28,
+			color: 'rgba(96,165,250,0.4)'
+		},
+		{
+			content: '$state',
+			pos: 'top:32%;left:3%',
+			delay: '3.7s',
+			rot: '-7deg',
+			opacity: 0.35,
+			color: 'rgba(255,186,2,0.4)'
+		}
 	] as const;
 
 	const stats = [
-		{ value: '100', label: 'Perf Score',   color: '#d91e53' },
-		{ value: '<1s',  label: 'Load Time',   color: '#ffba02' },
+		{ value: '100', label: 'Perf Score', color: '#d91e53' },
+		{ value: '<1s', label: 'Load Time', color: '#ffba02' },
 		{ value: 'Free', label: 'Open Source', color: '#4ade80' },
-		{ value: 'SSG',  label: 'Pre-rendered', color: '#60a5fa' },
+		{ value: 'SSG', label: 'Pre-rendered', color: '#60a5fa' }
 	];
 </script>
 
 <section class="hero" aria-label="Hero">
 	<div class="hero-border" aria-hidden="true"></div>
-	<div class="hero-grid"   aria-hidden="true"></div>
-	<div class="hero-glow"   aria-hidden="true"></div>
+	<div class="hero-grid" aria-hidden="true"></div>
+	<div class="hero-glow" aria-hidden="true"></div>
 
-	{#each particles as p}
+	{#each particles as p (p.content)}
 		<span
 			class="particle"
 			aria-hidden="true"
 			style="position:absolute;{p.pos};color:{p.color};opacity:{p.opacity};transform:rotate({p.rot});animation-delay:{p.delay};"
-		>{p.content}</span>
+			>{p.content}</span
+		>
 	{/each}
 
 	<div class="hero-content">
@@ -47,20 +116,18 @@
 		</h1>
 
 		<p class="hero-subtext">
-			Production-ready SvelteKit + Tailwind v4. Deploy in minutes. Score 100 on Lighthouse.
-			Free forever.
+			Production-ready SvelteKit + Tailwind v4. Deploy in minutes. Score 100 on Lighthouse. Free
+			forever.
 		</p>
 
 		<div class="hero-cta">
-			<Button href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
-				Use Template →
-			</Button>
+			<Button href={GITHUB_URL} target="_blank" rel="noopener noreferrer">Use Template →</Button>
 			<Button href="#features" variant="outline">See Features</Button>
 		</div>
 	</div>
 
 	<dl class="hero-stats">
-		{#each stats as stat}
+		{#each stats as stat (stat.label)}
 			<div class="stat">
 				<dt class="stat-label">{stat.label}</dt>
 				<dd class="stat-value" style="color:{stat.color}">{stat.value}</dd>
@@ -98,8 +165,8 @@
 		position: absolute;
 		inset: 0;
 		background-image:
-			linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-			linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+			linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 		background-size: 32px 32px;
 		pointer-events: none;
 	}
@@ -111,7 +178,7 @@
 		transform: translate(-50%, -60%);
 		width: 700px;
 		height: 700px;
-		background: radial-gradient(circle, rgba(217,30,83,0.1) 0%, transparent 65%);
+		background: radial-gradient(circle, rgba(217, 30, 83, 0.1) 0%, transparent 65%);
 		pointer-events: none;
 	}
 
@@ -161,7 +228,7 @@
 
 	.hero-subtext {
 		font-size: clamp(0.95rem, 2vw, 1.1rem);
-		color: rgba(255,255,255,0.55);
+		color: rgba(255, 255, 255, 0.55);
 		max-width: 520px;
 		line-height: 1.65;
 		margin: 0;
@@ -183,7 +250,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		padding-top: 1.5rem;
-		border-top: 1px solid rgba(255,255,255,0.07);
+		border-top: 1px solid rgba(255, 255, 255, 0.07);
 		width: 100%;
 		max-width: 560px;
 		margin: 0;
@@ -205,18 +272,28 @@
 
 	.stat-label {
 		font-size: 0.65rem;
-		color: rgba(255,255,255,0.45);
+		color: rgba(255, 255, 255, 0.45);
 		text-transform: uppercase;
 		letter-spacing: 0.06em;
 	}
 
 	@keyframes float-code {
-		0%, 100% { translate: 0 0px; }
-		50% { translate: 0 -18px; }
+		0%,
+		100% {
+			translate: 0 0px;
+		}
+		50% {
+			translate: 0 -18px;
+		}
 	}
 
 	@keyframes gradient-shift {
-		0%, 100% { background-position: 0% 50%; }
-		50% { background-position: 100% 50%; }
+		0%,
+		100% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
 	}
 </style>

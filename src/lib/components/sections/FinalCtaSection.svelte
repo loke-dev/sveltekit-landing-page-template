@@ -1,9 +1,7 @@
 <script lang="ts">
 	import Button from '$components/ui/Button.svelte';
 	import { fadeIn } from '$utils/fadeIn';
-
-	const GITHUB_URL =
-		'https://github.com/loke-dev/sveltekit-mdsvex-landing-page-template';
+	import { GITHUB_URL } from '$lib/config';
 	const VERCEL_DEPLOY_URL = `https://vercel.com/new/clone?repository-url=${encodeURIComponent(GITHUB_URL)}`;
 </script>
 
@@ -26,15 +24,17 @@
 <style>
 	.cta-section {
 		position: relative;
-		background: linear-gradient(135deg, rgba(217,30,83,0.08), rgba(75,46,198,0.08));
-		border-top: 1px solid rgba(217,30,83,0.15);
+		background: linear-gradient(135deg, rgba(217, 30, 83, 0.08), rgba(75, 46, 198, 0.08));
+		border-top: 1px solid rgba(217, 30, 83, 0.15);
 		padding: 5rem 1.5rem;
 		overflow: hidden;
 	}
 
 	.cta-border {
 		position: absolute;
-		top: 0; left: 0; right: 0;
+		top: 0;
+		left: 0;
+		right: 0;
 		height: 2px;
 		background: linear-gradient(90deg, transparent, #d91e53, #ffba02, #4b2ec6, transparent);
 		background-size: 200% 100%;
@@ -61,7 +61,7 @@
 	}
 
 	.cta-subtext {
-		color: rgba(255,255,255,0.5);
+		color: rgba(255, 255, 255, 0.5);
 		font-size: 1rem;
 		margin: 0;
 	}
@@ -75,7 +75,12 @@
 	}
 
 	@keyframes gradient-shift {
-		0%, 100% { background-position: 0% 50%; }
-		50%       { background-position: 100% 50%; }
+		0%,
+		100% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
 	}
 </style>

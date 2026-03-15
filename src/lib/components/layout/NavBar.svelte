@@ -1,8 +1,6 @@
 <script lang="ts">
 	import Button from '$components/ui/Button.svelte';
-
-	const GITHUB_URL =
-		'https://github.com/loke-dev/sveltekit-mdsvex-landing-page-template';
+	import { GITHUB_URL } from '$lib/config';
 
 	let menuOpen = $state(false);
 	let scrollY = $state(0);
@@ -46,7 +44,7 @@
 
 		<!-- Desktop links -->
 		<ul class="nav-links desktop-only" role="list">
-			{#each navLinks as link}
+			{#each navLinks as link (link.label)}
 				<li>
 					{#if link.external}
 						<a href={link.href} class="nav-link" target="_blank" rel="noopener noreferrer"
@@ -85,7 +83,7 @@
 	<!-- Mobile menu -->
 	<div id="mobile-menu" class="mobile-menu" class:open={menuOpen} aria-hidden={!menuOpen}>
 		<ul role="list">
-			{#each navLinks as link}
+			{#each navLinks as link (link.label)}
 				<li>
 					{#if link.external}
 						<a
@@ -130,14 +128,7 @@
 
 	.nav-border {
 		height: 2px;
-		background: linear-gradient(
-			90deg,
-			transparent,
-			#d91e53,
-			#ffba02,
-			#4b2ec6,
-			transparent
-		);
+		background: linear-gradient(90deg, transparent, #d91e53, #ffba02, #4b2ec6, transparent);
 		background-size: 200% 100%;
 		animation: gradient-shift 8s ease infinite;
 	}

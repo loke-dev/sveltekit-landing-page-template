@@ -1,42 +1,44 @@
-# sv
+# SvelteKit Landing Page Template
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A production-ready landing page template built with SvelteKit, Tailwind CSS v4, and MDsveX.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Blazing Fast** — SSG + Vite 6. 100 Lighthouse score out of the box
+- **Tailwind v4** — Design tokens in `@theme`, zero config file
+- **TypeScript** — Fully typed, Svelte 5 runes syntax throughout
+- **MDsveX Ready** — Add a blog in minutes
+- **SEO Optimised** — OG tags, sitemap, JSON-LD structured data
+- **Deploy Ready** — Vercel adapter, one-click deploy
 
-```sh
-# create a new project
-npx sv create my-app
+## Stack
+
+- [SvelteKit 2](https://kit.svelte.dev) + [Svelte 5](https://svelte.dev)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [MDsveX](https://mdsvex.pngwn.io)
+- [TypeScript](https://typescriptlang.org)
+- [Vite 6](https://vitejs.dev)
+
+## Get Started
+
+```bash
+git clone https://github.com/loke-dev/sveltekit-mdsvex-landing-page-template
+cd sveltekit-mdsvex-landing-page-template
+pnpm install
+pnpm dev
 ```
 
-To recreate this project with the same configuration:
+## Customise
 
-```sh
-# recreate this project
-pnpm dlx sv@0.12.8 create --template minimal --types ts --add prettier eslint playwright vitest="usages:unit" --install pnpm .
-```
+1. Update the GitHub URL in `src/lib/config.ts`
+2. Update the site URL in `src/routes/+page.svelte`
+3. Edit section content in `src/lib/components/sections/`
+4. Add your own `og-image.png` to `static/` (1200×630px recommended)
 
-## Developing
+## Deploy
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/loke-dev/sveltekit-mdsvex-landing-page-template)
 
-```sh
-npm run dev
+## License
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+MIT

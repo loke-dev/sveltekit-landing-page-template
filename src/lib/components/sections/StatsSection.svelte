@@ -1,22 +1,23 @@
 <script lang="ts">
+	import SectionLabel from '$components/ui/SectionLabel.svelte';
 	import { fadeIn } from '$utils/fadeIn';
 
 	const stats = [
-		{ value: '100',   label: 'Lighthouse Score',   sublabel: 'Performance',      color: '#d91e53' },
-		{ value: '<50ms', label: 'TTFB',               sublabel: 'Time to First Byte', color: '#ffba02' },
-		{ value: '★',     label: 'GitHub Stars',       sublabel: 'And growing',       color: '#4ade80' },
-		{ value: 'MIT',   label: 'License',            sublabel: 'Free forever',      color: '#60a5fa' },
+		{ value: '100', label: 'Lighthouse Score', sublabel: 'Performance', color: '#d91e53' },
+		{ value: '<50ms', label: 'TTFB', sublabel: 'Time to First Byte', color: '#ffba02' },
+		{ value: '★', label: 'GitHub Stars', sublabel: 'And growing', color: '#4ade80' },
+		{ value: 'MIT', label: 'License', sublabel: 'Free forever', color: '#60a5fa' }
 	];
 </script>
 
-<section class="section stats-section" aria-labelledby="stats-heading">
+<section class="section stats-section" aria-label="By the Numbers">
 	<div class="section-container">
-		<p class="stats-eyebrow" id="stats-heading">By the Numbers</p>
+		<SectionLabel text="By the Numbers" color="rgba(255,255,255,0.3)" />
 		<dl class="stats-grid" use:fadeIn>
-			{#each stats as stat}
+			{#each stats as stat (stat.label)}
 				<div class="stat-item">
-					<dd class="stat-value" style="color:{stat.color}">{stat.value}</dd>
 					<dt class="stat-name">{stat.label}</dt>
+					<dd class="stat-value" style="color:{stat.color}">{stat.value}</dd>
 					<span class="stat-sub">{stat.sublabel}</span>
 				</div>
 			{/each}
@@ -26,18 +27,8 @@
 
 <style>
 	.stats-section {
-		border-top: 1px solid rgba(255,255,255,0.04);
-		border-bottom: 1px solid rgba(255,255,255,0.04);
-	}
-
-	.stats-eyebrow {
-		font-family: var(--font-mono);
-		font-size: 0.68rem;
-		letter-spacing: 0.18em;
-		text-transform: uppercase;
-		color: rgba(255,255,255,0.3);
-		text-align: center;
-		margin: 0 0 2.5rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.04);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 	}
 
 	.stats-grid {
@@ -49,7 +40,9 @@
 	}
 
 	@media (min-width: 640px) {
-		.stats-grid { grid-template-columns: repeat(4, 1fr); }
+		.stats-grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
 	}
 
 	.stat-item {
@@ -65,6 +58,7 @@
 		font-weight: 900;
 		line-height: 1;
 		margin: 0;
+		order: -1;
 	}
 
 	.stat-name {
@@ -75,6 +69,6 @@
 
 	.stat-sub {
 		font-size: 0.7rem;
-		color: rgba(255,255,255,0.35);
+		color: rgba(255, 255, 255, 0.35);
 	}
 </style>

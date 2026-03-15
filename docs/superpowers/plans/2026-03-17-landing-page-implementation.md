@@ -16,35 +16,35 @@
 
 ## File Map
 
-| File | Purpose |
-|------|---------|
-| `package.json` | Project deps and scripts |
-| `svelte.config.js` | Adapter, MDsveX preprocessor, path aliases |
-| `vite.config.ts` | Tailwind v4 Vite plugin |
-| `mdsvex.config.js` | MDsveX extensions + rehype-slug |
-| `playwright.config.ts` | Playwright baseURL = localhost:4173 (preview) |
-| `src/app.html` | Font preloads, `body class="bg-background"` |
-| `src/lib/styles/app.css` | `@theme` tokens, keyframes, base/component layers |
-| `src/routes/+layout.ts` | `export const prerender = true` |
-| `src/routes/+layout.svelte` | Skip link → NavBar → `<main>` → Footer |
-| `src/routes/+page.svelte` | SEO meta + all section components |
-| `src/lib/components/layout/NavBar.svelte` | Fixed nav, scroll backdrop, mobile hamburger |
-| `src/lib/components/layout/Footer.svelte` | Minimal footer, gradient border |
-| `src/lib/components/ui/Button.svelte` | Polymorphic `<a>`/`<button>`, primary/outline |
-| `src/lib/components/ui/Badge.svelte` | Tech stack badge pill |
-| `src/lib/components/ui/SectionLabel.svelte` | Uppercase monospace eyebrow |
-| `src/lib/utils/fadeIn.ts` | Svelte action: Intersection Observer scroll fade |
-| `src/lib/components/sections/HeroSection.svelte` | Particles, radial glow, gradient headline, stats |
-| `src/lib/components/sections/FeaturesSection.svelte` | 6-card feature grid |
-| `src/lib/components/sections/TechStackSection.svelte` | Badge row |
-| `src/lib/components/sections/HowToUseSection.svelte` | 3-step + terminal mockup |
-| `src/lib/components/sections/DemoPreviewSection.svelte` | Browser chrome mockup |
-| `src/lib/components/sections/StatsSection.svelte` | 4-column stat grid |
-| `src/lib/components/sections/FinalCtaSection.svelte` | CTA banner |
-| `static/favicon.svg` | SVG favicon (orange-to-red gradient square) |
-| `static/robots.txt` | Allow all, sitemap reference |
-| `static/sitemap.xml` | Single-page sitemap |
-| `tests/landing.test.ts` | Playwright e2e: render, nav, a11y |
+| File                                                    | Purpose                                           |
+| ------------------------------------------------------- | ------------------------------------------------- |
+| `package.json`                                          | Project deps and scripts                          |
+| `svelte.config.js`                                      | Adapter, MDsveX preprocessor, path aliases        |
+| `vite.config.ts`                                        | Tailwind v4 Vite plugin                           |
+| `mdsvex.config.js`                                      | MDsveX extensions + rehype-slug                   |
+| `playwright.config.ts`                                  | Playwright baseURL = localhost:4173 (preview)     |
+| `src/app.html`                                          | Font preloads, `body class="bg-background"`       |
+| `src/lib/styles/app.css`                                | `@theme` tokens, keyframes, base/component layers |
+| `src/routes/+layout.ts`                                 | `export const prerender = true`                   |
+| `src/routes/+layout.svelte`                             | Skip link → NavBar → `<main>` → Footer            |
+| `src/routes/+page.svelte`                               | SEO meta + all section components                 |
+| `src/lib/components/layout/NavBar.svelte`               | Fixed nav, scroll backdrop, mobile hamburger      |
+| `src/lib/components/layout/Footer.svelte`               | Minimal footer, gradient border                   |
+| `src/lib/components/ui/Button.svelte`                   | Polymorphic `<a>`/`<button>`, primary/outline     |
+| `src/lib/components/ui/Badge.svelte`                    | Tech stack badge pill                             |
+| `src/lib/components/ui/SectionLabel.svelte`             | Uppercase monospace eyebrow                       |
+| `src/lib/utils/fadeIn.ts`                               | Svelte action: Intersection Observer scroll fade  |
+| `src/lib/components/sections/HeroSection.svelte`        | Particles, radial glow, gradient headline, stats  |
+| `src/lib/components/sections/FeaturesSection.svelte`    | 6-card feature grid                               |
+| `src/lib/components/sections/TechStackSection.svelte`   | Badge row                                         |
+| `src/lib/components/sections/HowToUseSection.svelte`    | 3-step + terminal mockup                          |
+| `src/lib/components/sections/DemoPreviewSection.svelte` | Browser chrome mockup                             |
+| `src/lib/components/sections/StatsSection.svelte`       | 4-column stat grid                                |
+| `src/lib/components/sections/FinalCtaSection.svelte`    | CTA banner                                        |
+| `static/favicon.svg`                                    | SVG favicon (orange-to-red gradient square)       |
+| `static/robots.txt`                                     | Allow all, sitemap reference                      |
+| `static/sitemap.xml`                                    | Single-page sitemap                               |
+| `tests/landing.test.ts`                                 | Playwright e2e: render, nav, a11y                 |
 
 ---
 
@@ -60,6 +60,7 @@ pnpm dlx sv create .
 ```
 
 When prompted interactively:
+
 - Which template? → **SvelteKit minimal**
 - Add type checking? → **Yes, using TypeScript syntax**
 - Additional options? → **ESLint, Prettier, Playwright, Vitest** (select all four)
@@ -117,7 +118,7 @@ export default defineConfig({
 - [ ] **Step 3: Create `src/lib/styles/app.css` with a minimal Tailwind import**
 
 ```css
-@import "tailwindcss";
+@import 'tailwindcss';
 ```
 
 - [ ] **Step 4: Import the stylesheet in the layout so Tailwind is active**
@@ -270,7 +271,7 @@ git commit -m "chore: add font preloads to app.html"
 - [ ] **Step 1: Replace `src/lib/styles/app.css` with full design system**
 
 ```css
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* ─── Design Tokens ─────────────────────────────── */
 @theme {
@@ -283,8 +284,8 @@ git commit -m "chore: add font preloads to app.html"
 	--color-background-code: #001445;
 
 	/* Typography */
-	--font-sans: "Inter", system-ui, sans-serif;
-	--font-mono: "JetBrains Mono", "Fira Code", monospace;
+	--font-sans: 'Inter', system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
 	/* Animations */
 	--animate-gradient-shift: gradient-shift 8s ease infinite;
@@ -719,8 +720,7 @@ Expected: FAIL — no NavBar present yet.
 <script lang="ts">
 	import Button from '$components/ui/Button.svelte';
 
-	const GITHUB_URL =
-		'https://github.com/YOUR_USERNAME/sveltekit-mdsvex-landing-page-template';
+	const GITHUB_URL = 'https://github.com/YOUR_USERNAME/sveltekit-mdsvex-landing-page-template';
 
 	let menuOpen = $state(false);
 	let scrollY = $state(0);
@@ -848,14 +848,7 @@ Expected: FAIL — no NavBar present yet.
 
 	.nav-border {
 		height: 2px;
-		background: linear-gradient(
-			90deg,
-			transparent,
-			#d91e53,
-			#ffba02,
-			#4b2ec6,
-			transparent
-		);
+		background: linear-gradient(90deg, transparent, #d91e53, #ffba02, #4b2ec6, transparent);
 		background-size: 200% 100%;
 		animation: gradient-shift 8s ease infinite;
 	}
@@ -1080,14 +1073,7 @@ git commit -m "feat: add NavBar with scroll backdrop and mobile hamburger"
 
 	.footer-border {
 		height: 2px;
-		background: linear-gradient(
-			90deg,
-			transparent,
-			#d91e53,
-			#ffba02,
-			#4b2ec6,
-			transparent
-		);
+		background: linear-gradient(90deg, transparent, #d91e53, #ffba02, #4b2ec6, transparent);
 		background-size: 200% 100%;
 		animation: gradient-shift 8s ease infinite;
 	}
@@ -1251,28 +1237,97 @@ Expected: FAIL — no hero yet.
 <script lang="ts">
 	import Button from '$components/ui/Button.svelte';
 
-	const GITHUB_URL =
-		'https://github.com/YOUR_USERNAME/sveltekit-mdsvex-landing-page-template';
+	const GITHUB_URL = 'https://github.com/YOUR_USERNAME/sveltekit-mdsvex-landing-page-template';
 
 	// Positioned floating code keywords — (content, top/left/right/bottom, delay, rotation, opacity, color)
 	const particles = [
-		{ content: 'const',  pos: 'top:14%;left:7%',   delay: '0s',    rot: '-13deg', opacity: 0.55, color: 'rgba(217,30,83,0.65)' },
-		{ content: 'async',  pos: 'top:22%;right:9%',  delay: '2.2s',  rot: '9deg',   opacity: 0.45, color: 'rgba(255,186,2,0.55)' },
-		{ content: 'export', pos: 'bottom:28%;left:11%', delay: '4s',  rot: '6deg',   opacity: 0.45, color: 'rgba(75,46,198,0.6)' },
-		{ content: '() =>',  pos: 'top:42%;right:14%', delay: '1.1s',  rot: '-5deg',  opacity: 0.4,  color: 'rgba(96,165,250,0.55)' },
-		{ content: 'return', pos: 'bottom:18%;right:7%', delay: '3.1s', rot: '11deg', opacity: 0.38, color: 'rgba(74,222,128,0.5)' },
-		{ content: 'import', pos: 'top:8%;left:28%',   delay: '5s',    rot: '-9deg',  opacity: 0.3,  color: 'rgba(217,30,83,0.4)' },
-		{ content: 'await',  pos: 'bottom:38%;right:22%', delay: '2.6s', rot: '7deg', opacity: 0.4,  color: 'rgba(255,186,2,0.45)' },
-		{ content: 'type',   pos: 'top:58%;left:4%',   delay: '1.5s',  rot: '-4deg',  opacity: 0.35, color: 'rgba(167,139,250,0.5)' },
-		{ content: 'function', pos: 'bottom:50%;left:18%', delay: '6s', rot: '3deg',  opacity: 0.28, color: 'rgba(96,165,250,0.4)' },
-		{ content: '$state', pos: 'top:32%;left:3%',   delay: '3.7s',  rot: '-7deg',  opacity: 0.35, color: 'rgba(255,186,2,0.4)' },
+		{
+			content: 'const',
+			pos: 'top:14%;left:7%',
+			delay: '0s',
+			rot: '-13deg',
+			opacity: 0.55,
+			color: 'rgba(217,30,83,0.65)'
+		},
+		{
+			content: 'async',
+			pos: 'top:22%;right:9%',
+			delay: '2.2s',
+			rot: '9deg',
+			opacity: 0.45,
+			color: 'rgba(255,186,2,0.55)'
+		},
+		{
+			content: 'export',
+			pos: 'bottom:28%;left:11%',
+			delay: '4s',
+			rot: '6deg',
+			opacity: 0.45,
+			color: 'rgba(75,46,198,0.6)'
+		},
+		{
+			content: '() =>',
+			pos: 'top:42%;right:14%',
+			delay: '1.1s',
+			rot: '-5deg',
+			opacity: 0.4,
+			color: 'rgba(96,165,250,0.55)'
+		},
+		{
+			content: 'return',
+			pos: 'bottom:18%;right:7%',
+			delay: '3.1s',
+			rot: '11deg',
+			opacity: 0.38,
+			color: 'rgba(74,222,128,0.5)'
+		},
+		{
+			content: 'import',
+			pos: 'top:8%;left:28%',
+			delay: '5s',
+			rot: '-9deg',
+			opacity: 0.3,
+			color: 'rgba(217,30,83,0.4)'
+		},
+		{
+			content: 'await',
+			pos: 'bottom:38%;right:22%',
+			delay: '2.6s',
+			rot: '7deg',
+			opacity: 0.4,
+			color: 'rgba(255,186,2,0.45)'
+		},
+		{
+			content: 'type',
+			pos: 'top:58%;left:4%',
+			delay: '1.5s',
+			rot: '-4deg',
+			opacity: 0.35,
+			color: 'rgba(167,139,250,0.5)'
+		},
+		{
+			content: 'function',
+			pos: 'bottom:50%;left:18%',
+			delay: '6s',
+			rot: '3deg',
+			opacity: 0.28,
+			color: 'rgba(96,165,250,0.4)'
+		},
+		{
+			content: '$state',
+			pos: 'top:32%;left:3%',
+			delay: '3.7s',
+			rot: '-7deg',
+			opacity: 0.35,
+			color: 'rgba(255,186,2,0.4)'
+		}
 	] as const;
 
 	const stats = [
 		{ value: '100', label: 'Perf Score', color: '#d91e53' },
-		{ value: '<1s',  label: 'Load Time',  color: '#ffba02' },
+		{ value: '<1s', label: 'Load Time', color: '#ffba02' },
 		{ value: 'Free', label: 'Open Source', color: '#4ade80' },
-		{ value: 'SSG',  label: 'Pre-rendered', color: '#60a5fa' },
+		{ value: 'SSG', label: 'Pre-rendered', color: '#60a5fa' }
 	];
 </script>
 
@@ -1292,8 +1347,8 @@ Expected: FAIL — no hero yet.
 			class="particle"
 			aria-hidden="true"
 			style="position:absolute;{p.pos};color:{p.color};opacity:{p.opacity};
-			       transform:rotate({p.rot});animation-delay:{p.delay};"
-		>{p.content}</span>
+			       transform:rotate({p.rot});animation-delay:{p.delay};">{p.content}</span
+		>
 	{/each}
 
 	<!-- Main hero content -->
@@ -1306,14 +1361,12 @@ Expected: FAIL — no hero yet.
 		</h1>
 
 		<p class="hero-subtext">
-			Production-ready SvelteKit + Tailwind v4. Deploy in minutes. Score 100 on Lighthouse.
-			Free forever.
+			Production-ready SvelteKit + Tailwind v4. Deploy in minutes. Score 100 on Lighthouse. Free
+			forever.
 		</p>
 
 		<div class="hero-cta">
-			<Button href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
-				Use Template →
-			</Button>
+			<Button href={GITHUB_URL} target="_blank" rel="noopener noreferrer">Use Template →</Button>
 			<Button href="#features" variant="outline">See Features</Button>
 		</div>
 	</div>
@@ -1349,14 +1402,7 @@ Expected: FAIL — no hero yet.
 		left: 0;
 		right: 0;
 		height: 2px;
-		background: linear-gradient(
-			90deg,
-			transparent,
-			#d91e53,
-			#ffba02,
-			#4b2ec6,
-			transparent
-		);
+		background: linear-gradient(90deg, transparent, #d91e53, #ffba02, #4b2ec6, transparent);
 		background-size: 200% 100%;
 		animation: gradient-shift 8s ease infinite;
 	}
@@ -1364,7 +1410,8 @@ Expected: FAIL — no hero yet.
 	.hero-grid {
 		position: absolute;
 		inset: 0;
-		background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+		background-image:
+			linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
 			linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 		background-size: 32px 32px;
 		pointer-events: none;
@@ -1650,7 +1697,9 @@ test('features section has 6 feature cards', async ({ page }) => {
 		display: flex;
 		flex-direction: column;
 		gap: 0.6rem;
-		transition: transform 0.2s, box-shadow 0.2s;
+		transition:
+			transform 0.2s,
+			box-shadow 0.2s;
 	}
 
 	.feature-card:hover {
@@ -1721,13 +1770,43 @@ git commit -m "feat: add FeaturesSection with 6-card responsive grid"
 	import { fadeIn } from '$utils/fadeIn';
 
 	const stack = [
-		{ label: 'SvelteKit 2', bg: 'rgba(255,70,0,0.1)', text: '#ff7a45', border: 'rgba(255,70,0,0.25)' },
-		{ label: 'Svelte 5',    bg: 'rgba(255,70,0,0.08)', text: '#ff9060', border: 'rgba(255,70,0,0.2)' },
-		{ label: 'Tailwind v4', bg: 'rgba(56,189,248,0.1)', text: '#38bdf8', border: 'rgba(56,189,248,0.25)' },
-		{ label: 'TypeScript',  bg: 'rgba(96,165,250,0.1)', text: '#60a5fa', border: 'rgba(96,165,250,0.25)' },
-		{ label: 'MDsveX',      bg: 'rgba(74,222,128,0.1)', text: '#4ade80', border: 'rgba(74,222,128,0.25)' },
-		{ label: 'Vite 6',      bg: 'rgba(251,191,36,0.1)', text: '#fbbf24', border: 'rgba(251,191,36,0.25)' },
-		{ label: 'Vercel',      bg: 'rgba(255,255,255,0.05)', text: '#ccc', border: 'rgba(255,255,255,0.15)' },
+		{
+			label: 'SvelteKit 2',
+			bg: 'rgba(255,70,0,0.1)',
+			text: '#ff7a45',
+			border: 'rgba(255,70,0,0.25)'
+		},
+		{ label: 'Svelte 5', bg: 'rgba(255,70,0,0.08)', text: '#ff9060', border: 'rgba(255,70,0,0.2)' },
+		{
+			label: 'Tailwind v4',
+			bg: 'rgba(56,189,248,0.1)',
+			text: '#38bdf8',
+			border: 'rgba(56,189,248,0.25)'
+		},
+		{
+			label: 'TypeScript',
+			bg: 'rgba(96,165,250,0.1)',
+			text: '#60a5fa',
+			border: 'rgba(96,165,250,0.25)'
+		},
+		{
+			label: 'MDsveX',
+			bg: 'rgba(74,222,128,0.1)',
+			text: '#4ade80',
+			border: 'rgba(74,222,128,0.25)'
+		},
+		{
+			label: 'Vite 6',
+			bg: 'rgba(251,191,36,0.1)',
+			text: '#fbbf24',
+			border: 'rgba(251,191,36,0.25)'
+		},
+		{
+			label: 'Vercel',
+			bg: 'rgba(255,255,255,0.05)',
+			text: '#ccc',
+			border: 'rgba(255,255,255,0.15)'
+		}
 	];
 </script>
 
@@ -1738,7 +1817,12 @@ git commit -m "feat: add FeaturesSection with 6-card responsive grid"
 			<div class="stack-badges" role="list">
 				{#each stack as tech}
 					<span role="listitem">
-						<Badge label={tech.label} bgColor={tech.bg} textColor={tech.text} borderColor={tech.border} />
+						<Badge
+							label={tech.label}
+							bgColor={tech.bg}
+							textColor={tech.text}
+							borderColor={tech.border}
+						/>
 					</span>
 				{/each}
 			</div>
@@ -1847,7 +1931,12 @@ test('how to use section has 3 steps', async ({ page }) => {
 			</ol>
 
 			<!-- Terminal mockup -->
-			<div class="terminal" use:fadeIn={{ delay: 200 }} role="img" aria-label="Terminal showing installation commands">
+			<div
+				class="terminal"
+				use:fadeIn={{ delay: 200 }}
+				role="img"
+				aria-label="Terminal showing installation commands"
+			>
 				<div class="terminal-header" aria-hidden="true">
 					<span class="dot red"></span>
 					<span class="dot yellow"></span>
@@ -2049,7 +2138,12 @@ Static HTML/CSS recreation of a mini hero inside a browser chrome mockup.
 			<h2 id="preview-heading" class="section-title">See what you're getting.</h2>
 		</div>
 
-		<div class="browser" use:fadeIn={{ delay: 150 }} role="img" aria-label="Browser preview of the landing page template">
+		<div
+			class="browser"
+			use:fadeIn={{ delay: 150 }}
+			role="img"
+			aria-label="Browser preview of the landing page template"
+		>
 			<!-- Browser chrome -->
 			<div class="browser-chrome" aria-hidden="true">
 				<div class="browser-dots">
@@ -2066,9 +2160,18 @@ Static HTML/CSS recreation of a mini hero inside a browser chrome mockup.
 					<div class="mini-grid"></div>
 					<div class="mini-glow"></div>
 					<!-- particles -->
-					<span class="mini-particle" style="top:12%;left:8%;color:rgba(217,30,83,0.5);animation-delay:0s;">const</span>
-					<span class="mini-particle" style="top:20%;right:10%;color:rgba(255,186,2,0.4);animation-delay:2s;">async</span>
-					<span class="mini-particle" style="bottom:22%;left:10%;color:rgba(75,46,198,0.5);animation-delay:4s;">export</span>
+					<span
+						class="mini-particle"
+						style="top:12%;left:8%;color:rgba(217,30,83,0.5);animation-delay:0s;">const</span
+					>
+					<span
+						class="mini-particle"
+						style="top:20%;right:10%;color:rgba(255,186,2,0.4);animation-delay:2s;">async</span
+					>
+					<span
+						class="mini-particle"
+						style="bottom:22%;left:10%;color:rgba(75,46,198,0.5);animation-delay:4s;">export</span
+					>
 					<div class="mini-content">
 						<p class="mini-eyebrow">✦ Open Source Template ✦</p>
 						<h3 class="mini-headline">
@@ -2162,7 +2265,8 @@ Static HTML/CSS recreation of a mini hero inside a browser chrome mockup.
 	.mini-grid {
 		position: absolute;
 		inset: 0;
-		background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+		background-image:
+			linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
 			linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 		background-size: 24px 24px;
 	}
@@ -2270,10 +2374,10 @@ git commit -m "feat: add DemoPreviewSection with browser chrome mockup"
 	import { fadeIn } from '$utils/fadeIn';
 
 	const stats = [
-		{ value: '100',   label: 'Lighthouse Score', sublabel: 'Performance',   color: '#d91e53' },
-		{ value: '<50ms', label: 'TTFB',              sublabel: 'Time to First Byte', color: '#ffba02' },
-		{ value: '★',     label: 'GitHub Stars',     sublabel: 'And growing',    color: '#4ade80' },
-		{ value: 'MIT',   label: 'License',           sublabel: 'Free forever',   color: '#60a5fa' },
+		{ value: '100', label: 'Lighthouse Score', sublabel: 'Performance', color: '#d91e53' },
+		{ value: '<50ms', label: 'TTFB', sublabel: 'Time to First Byte', color: '#ffba02' },
+		{ value: '★', label: 'GitHub Stars', sublabel: 'And growing', color: '#4ade80' },
+		{ value: 'MIT', label: 'License', sublabel: 'Free forever', color: '#60a5fa' }
 	];
 </script>
 
@@ -2383,8 +2487,7 @@ test('final CTA section has deploy button', async ({ page }) => {
 	import Button from '$components/ui/Button.svelte';
 	import { fadeIn } from '$utils/fadeIn';
 
-	const GITHUB_URL =
-		'https://github.com/YOUR_USERNAME/sveltekit-mdsvex-landing-page-template';
+	const GITHUB_URL = 'https://github.com/YOUR_USERNAME/sveltekit-mdsvex-landing-page-template';
 	const VERCEL_DEPLOY_URL = `https://vercel.com/new/clone?repository-url=${encodeURIComponent(GITHUB_URL)}`;
 </script>
 
@@ -2407,11 +2510,7 @@ test('final CTA section has deploy button', async ({ page }) => {
 <style>
 	.cta-section {
 		position: relative;
-		background: linear-gradient(
-			135deg,
-			rgba(217, 30, 83, 0.08),
-			rgba(75, 46, 198, 0.08)
-		);
+		background: linear-gradient(135deg, rgba(217, 30, 83, 0.08), rgba(75, 46, 198, 0.08));
 		border-top: 1px solid rgba(217, 30, 83, 0.15);
 		padding: 5rem 1.5rem;
 		overflow: hidden;
@@ -2423,14 +2522,7 @@ test('final CTA section has deploy button', async ({ page }) => {
 		left: 0;
 		right: 0;
 		height: 2px;
-		background: linear-gradient(
-			90deg,
-			transparent,
-			#d91e53,
-			#ffba02,
-			#4b2ec6,
-			transparent
-		);
+		background: linear-gradient(90deg, transparent, #d91e53, #ffba02, #4b2ec6, transparent);
 		background-size: 200% 100%;
 		animation: gradient-shift 8s ease infinite;
 	}
@@ -2794,6 +2886,7 @@ git push
 ## Done
 
 All tasks complete. The project is:
+
 - Built and passing all e2e tests
 - Pushed to a private GitHub repo at `github.com/YOUR_USERNAME/sveltekit-mdsvex-landing-page-template`
 - Ready to deploy: connect to Vercel, select the repo, deploy — zero config needed

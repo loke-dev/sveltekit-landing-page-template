@@ -27,7 +27,7 @@
 		{@render children()}
 	</a>
 {:else}
-	<button {onclick} class="btn btn-{variant} {className}">
+	<button type="button" {onclick} class="btn btn-{variant} {className}">
 		{@render children()}
 	</button>
 {/if}

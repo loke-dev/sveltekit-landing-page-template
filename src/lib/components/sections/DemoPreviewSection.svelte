@@ -1,15 +1,21 @@
 <script lang="ts">
+	import SectionLabel from '$components/ui/SectionLabel.svelte';
 	import { fadeIn } from '$utils/fadeIn';
 </script>
 
 <section class="section" aria-labelledby="preview-heading">
 	<div class="section-container">
 		<div class="section-header" use:fadeIn>
-			<p class="preview-label">Live Preview</p>
+			<SectionLabel text="Live Preview" />
 			<h2 id="preview-heading" class="section-title">See what you're getting.</h2>
 		</div>
 
-		<div class="browser" use:fadeIn={{ delay: 150 }} role="img" aria-label="Browser preview of the landing page template">
+		<div
+			class="browser"
+			use:fadeIn={{ delay: 150 }}
+			role="img"
+			aria-label="Browser preview of the landing page template"
+		>
 			<div class="browser-chrome" aria-hidden="true">
 				<div class="browser-dots">
 					<span class="dot red"></span>
@@ -23,9 +29,18 @@
 				<div class="mini-hero">
 					<div class="mini-grid"></div>
 					<div class="mini-glow"></div>
-					<span class="mini-particle" style="top:12%;left:8%;color:rgba(217,30,83,0.5);animation-delay:0s;">const</span>
-					<span class="mini-particle" style="top:20%;right:10%;color:rgba(255,186,2,0.4);animation-delay:2s;">async</span>
-					<span class="mini-particle" style="bottom:22%;left:10%;color:rgba(75,46,198,0.5);animation-delay:4s;">export</span>
+					<span
+						class="mini-particle"
+						style="top:12%;left:8%;color:rgba(217,30,83,0.5);animation-delay:0s;">const</span
+					>
+					<span
+						class="mini-particle"
+						style="top:20%;right:10%;color:rgba(255,186,2,0.4);animation-delay:2s;">async</span
+					>
+					<span
+						class="mini-particle"
+						style="bottom:22%;left:10%;color:rgba(75,46,198,0.5);animation-delay:4s;">export</span
+					>
 					<div class="mini-content">
 						<p class="mini-eyebrow">✦ Open Source Template ✦</p>
 						<h3 class="mini-headline">
@@ -42,18 +57,8 @@
 </section>
 
 <style>
-	.preview-label {
-		font-family: var(--font-mono);
-		font-size: 0.68rem;
-		letter-spacing: 0.18em;
-		text-transform: uppercase;
-		color: var(--color-primary);
-		margin-bottom: 0.6rem;
-		margin-top: 0;
-	}
-
 	.browser {
-		border: 1px solid rgba(255,255,255,0.1);
+		border: 1px solid rgba(255, 255, 255, 0.1);
 		border-radius: 0.75rem;
 		overflow: hidden;
 		background: var(--color-background-code);
@@ -62,28 +67,41 @@
 	}
 
 	.browser-chrome {
-		background: rgba(255,255,255,0.04);
+		background: rgba(255, 255, 255, 0.04);
 		padding: 0.65rem 1rem;
 		display: flex;
 		align-items: center;
 		gap: 0.75rem;
-		border-bottom: 1px solid rgba(255,255,255,0.07);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 	}
 
-	.browser-dots { display: flex; gap: 5px; }
+	.browser-dots {
+		display: flex;
+		gap: 5px;
+	}
 
-	.dot { width: 10px; height: 10px; border-radius: 50%; }
-	.dot.red    { background: #ff5f56; }
-	.dot.yellow { background: #ffbd2e; }
-	.dot.green  { background: #27c93f; }
+	.dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+	}
+	.dot.red {
+		background: #ff5f56;
+	}
+	.dot.yellow {
+		background: #ffbd2e;
+	}
+	.dot.green {
+		background: #27c93f;
+	}
 
 	.browser-url {
 		flex: 1;
-		background: rgba(255,255,255,0.05);
+		background: rgba(255, 255, 255, 0.05);
 		border-radius: 4px;
 		padding: 0.2rem 0.75rem;
 		font-size: 0.72rem;
-		color: rgba(255,255,255,0.35);
+		color: rgba(255, 255, 255, 0.35);
 		font-family: var(--font-mono);
 	}
 
@@ -101,17 +119,19 @@
 		position: absolute;
 		inset: 0;
 		background-image:
-			linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-			linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+			linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 		background-size: 24px 24px;
 	}
 
 	.mini-glow {
 		position: absolute;
-		top: 50%; left: 50%;
+		top: 50%;
+		left: 50%;
 		transform: translate(-50%, -50%);
-		width: 400px; height: 400px;
-		background: radial-gradient(circle, rgba(217,30,83,0.1) 0%, transparent 65%);
+		width: 400px;
+		height: 400px;
+		background: radial-gradient(circle, rgba(217, 30, 83, 0.1) 0%, transparent 65%);
 	}
 
 	.mini-particle {
@@ -159,7 +179,11 @@
 		background-clip: text;
 	}
 
-	.mini-cta { display: flex; gap: 0.5rem; margin-top: 0.25rem; }
+	.mini-cta {
+		display: flex;
+		gap: 0.5rem;
+		margin-top: 0.25rem;
+	}
 
 	.mini-btn {
 		background: linear-gradient(135deg, #d91e53, #9b1c3a);
@@ -168,11 +192,16 @@
 		border-radius: 0.4rem;
 		font-size: 0.75rem;
 		font-weight: 700;
-		box-shadow: 0 0 16px rgba(217,30,83,0.3);
+		box-shadow: 0 0 16px rgba(217, 30, 83, 0.3);
 	}
 
 	@keyframes float-code {
-		0%, 100% { translate: 0 0px; }
-		50%       { translate: 0 -10px; }
+		0%,
+		100% {
+			translate: 0 0px;
+		}
+		50% {
+			translate: 0 -10px;
+		}
 	}
 </style>

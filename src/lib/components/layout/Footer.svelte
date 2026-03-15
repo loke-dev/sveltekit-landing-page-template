@@ -23,14 +23,7 @@
 
 	.footer-border {
 		height: 2px;
-		background: linear-gradient(
-			90deg,
-			transparent,
-			#d91e53,
-			#ffba02,
-			#4b2ec6,
-			transparent
-		);
+		background: linear-gradient(90deg, transparent, #d91e53, #ffba02, #4b2ec6, transparent);
 		background-size: 200% 100%;
 		animation: gradient-shift 8s ease infinite;
 	}
