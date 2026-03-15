@@ -4,6 +4,7 @@
 	import TechStackSection from '$components/sections/TechStackSection.svelte';
 	import HowToUseSection from '$components/sections/HowToUseSection.svelte';
 	import DemoPreviewSection from '$components/sections/DemoPreviewSection.svelte';
+	import StatsSection from '$components/sections/StatsSection.svelte';
 </script>
 
 <HeroSection />
@@ -11,3 +12,4 @@
 <TechStackSection />
 <HowToUseSection />
 <DemoPreviewSection />
+<StatsSection />
