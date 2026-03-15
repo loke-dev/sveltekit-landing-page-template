@@ -3,9 +3,11 @@
 	import FeaturesSection from '$components/sections/FeaturesSection.svelte';
 	import TechStackSection from '$components/sections/TechStackSection.svelte';
 	import HowToUseSection from '$components/sections/HowToUseSection.svelte';
+	import DemoPreviewSection from '$components/sections/DemoPreviewSection.svelte';
 </script>
 
 <HeroSection />
 <FeaturesSection />
 <TechStackSection />
 <HowToUseSection />
+<DemoPreviewSection />
