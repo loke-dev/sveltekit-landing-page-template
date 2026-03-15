@@ -22,8 +22,8 @@ A production-ready landing page template built with SvelteKit, Tailwind CSS v4, 
 ## Get Started
 
 ```bash
-git clone https://github.com/loke-dev/sveltekit-mdsvex-landing-page-template
-cd sveltekit-mdsvex-landing-page-template
+git clone https://github.com/loke-dev/sveltekit-landing-page-template
+cd sveltekit-landing-page-template
 pnpm install
 pnpm dev
 ```
@@ -37,7 +37,7 @@ pnpm dev
 
 ## Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/loke-dev/sveltekit-mdsvex-landing-page-template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/loke-dev/sveltekit-landing-page-template)
 
 ## License
 
