@@ -10,7 +10,7 @@
 	];
 </script>
 
-<section class="section stats-section" aria-label="By the Numbers">
+<section class="section stats-section cv-section" aria-label="By the Numbers">
 	<div class="section-container">
 		<SectionLabel text="By the Numbers" color="var(--color-text-subtle, #8d9bb3)" />
 		<dl class="stats-grid" use:fadeIn>

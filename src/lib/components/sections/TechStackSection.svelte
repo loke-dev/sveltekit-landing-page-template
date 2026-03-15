@@ -44,7 +44,7 @@
 	];
 </script>
 
-<section class="section" aria-label="Built With">
+<section class="section cv-section" aria-label="Built With">
 	<div class="section-container">
 		<div class="stack-inner" use:fadeIn>
 			<SectionLabel text="Built With" color="var(--color-text-subtle, #8d9bb3)" />

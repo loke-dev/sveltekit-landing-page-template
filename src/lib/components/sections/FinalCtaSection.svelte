@@ -5,7 +5,7 @@
 	const VERCEL_DEPLOY_URL = `https://vercel.com/new/clone?repository-url=${encodeURIComponent(GITHUB_URL)}`;
 </script>
 
-<section class="cta-section" aria-labelledby="cta-heading" use:fadeIn>
+<section class="cta-section cv-section" aria-labelledby="cta-heading" use:fadeIn>
 	<div class="cta-border" aria-hidden="true"></div>
 	<div class="cta-inner">
 		<h2 id="cta-heading" class="cta-headline">Ready to ship something beautiful?</h2>

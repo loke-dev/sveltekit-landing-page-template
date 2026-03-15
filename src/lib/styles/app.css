@@ -132,6 +132,19 @@
 		line-height: 1.2;
 		letter-spacing: -0.02em;
 	}
+
+	/**
+	 * Skip layout/paint for off-screen sections until near viewport.
+	 * Not used on #features / #how-to-use so in-page anchors stay correct.
+	 */
+	.cv-section {
+		content-visibility: auto;
+		contain-intrinsic-size: auto 520px;
+	}
+
+	.cv-section--tall {
+		contain-intrinsic-size: auto 760px;
+	}
 }
 
 /* ─── Reduced Motion ─────────────────────────────── */

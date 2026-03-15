@@ -3,7 +3,7 @@
 	import { fadeIn } from '$utils/fadeIn';
 </script>
 
-<section class="section" aria-labelledby="preview-heading">
+<section class="section cv-section cv-section--tall" aria-labelledby="preview-heading">
 	<div class="section-container">
 		<div class="section-header" use:fadeIn>
 			<SectionLabel color="var(--color-secondary)" text="Live Preview" />
