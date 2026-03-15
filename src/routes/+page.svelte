@@ -8,6 +8,8 @@
 	import FinalCtaSection from '$components/sections/FinalCtaSection.svelte';
 	import { SITE_URL } from '$lib/config';
 
+	const OG_IMAGE = `${SITE_URL}/og-image.png`;
+
 	const TITLE = 'SvelteKit Landing Page Template — Fast, Beautiful, Free';
 	const DESCRIPTION =
 		'A production-ready SvelteKit + Tailwind v4 landing page template. 100 Lighthouse score, MDsveX ready, one-click Vercel deploy.';
