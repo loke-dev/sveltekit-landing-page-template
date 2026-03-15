@@ -2,7 +2,7 @@
 	import Button from '$components/ui/Button.svelte';
 
 	const GITHUB_URL =
-		'https://github.com/YOUR_USERNAME/sveltekit-mdsvex-landing-page-template';
+		'https://github.com/loke-dev/sveltekit-mdsvex-landing-page-template';
 
 	const particles = [
 		{ content: 'const',    pos: 'top:14%;left:7%',       delay: '0s',   rot: '-13deg', opacity: 0.55, color: 'rgba(217,30,83,0.65)' },

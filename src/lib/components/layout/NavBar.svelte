@@ -2,7 +2,7 @@
 	import Button from '$components/ui/Button.svelte';
 
 	const GITHUB_URL =
-		'https://github.com/YOUR_USERNAME/sveltekit-mdsvex-landing-page-template';
+		'https://github.com/loke-dev/sveltekit-mdsvex-landing-page-template';
 
 	let menuOpen = $state(false);
 	let scrollY = $state(0);

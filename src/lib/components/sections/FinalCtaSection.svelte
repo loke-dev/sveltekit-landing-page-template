@@ -3,7 +3,7 @@
 	import { fadeIn } from '$utils/fadeIn';
 
 	const GITHUB_URL =
-		'https://github.com/YOUR_USERNAME/sveltekit-mdsvex-landing-page-template';
+		'https://github.com/loke-dev/sveltekit-mdsvex-landing-page-template';
 	const VERCEL_DEPLOY_URL = `https://vercel.com/new/clone?repository-url=${encodeURIComponent(GITHUB_URL)}`;
 </script>
 
