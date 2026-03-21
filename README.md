@@ -2,6 +2,8 @@
 
 A production-ready landing page template built with SvelteKit, Tailwind CSS v4, and MDsveX.
 
+<img width="939" height="691" alt="Image" src="https://github.com/user-attachments/assets/8a2e3c04-3da9-4993-931f-0fbb0aad9a60" />
+
 ## Features
 
 - **Blazing Fast** — SSG + Vite 6. 100 Lighthouse score out of the box
