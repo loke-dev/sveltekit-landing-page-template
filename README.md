@@ -11,7 +11,7 @@ A production-ready landing page template built with SvelteKit, Tailwind CSS v4, 
 - **TypeScript** — Fully typed, Svelte 5 runes syntax throughout
 - **MDsveX Ready** — Add a blog in minutes
 - **SEO Optimised** — OG tags, sitemap, JSON-LD structured data
-- **Deploy Ready** — Vercel adapter, one-click deploy
+- **Deploy Ready** — Cloudflare Workers configuration included
 
 ## Stack
 
@@ -39,7 +39,7 @@ pnpm dev
 
 ## Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/loke-dev/sveltekit-landing-page-template)
+[Live demo](https://sveltekit-landing-page.loke.dev)
 
 ## License
 

@@ -22,7 +22,7 @@
 					<span class="dot yellow"></span>
 					<span class="dot green"></span>
 				</div>
-				<div class="browser-url">your-site.vercel.app</div>
+				<div class="browser-url">your-site.loke.dev</div>
 			</div>
 
 			<div class="browser-body" aria-hidden="true">

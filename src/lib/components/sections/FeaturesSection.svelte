@@ -41,7 +41,7 @@
 		{
 			icon: '🚀',
 			title: 'Deploy Ready',
-			desc: 'Vercel adapter included. Push to GitHub — live in 30 seconds.',
+			desc: 'Cloudflare Workers configuration included. Push to GitHub — live in seconds.',
 			bg: 'rgba(251,146,60,0.06)',
 			border: 'rgba(251,146,60,0.18)'
 		}

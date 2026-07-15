@@ -12,7 +12,7 @@
 
 	const TITLE = 'SvelteKit Landing Page Template — Fast, Beautiful, Free';
 	const DESCRIPTION =
-		'A production-ready SvelteKit + Tailwind v4 landing page template. 100 Lighthouse score, MDsveX ready, one-click Vercel deploy.';
+		'A production-ready SvelteKit + Tailwind v4 landing page template. 100 Lighthouse score, MDsveX ready, Cloudflare Workers deployment.';
 </script>
 
 <svelte:head>

@@ -2,7 +2,6 @@
 	import Button from '$components/ui/Button.svelte';
 	import { fadeIn } from '$utils/fadeIn';
 	import { GITHUB_URL } from '$lib/config';
-	const VERCEL_DEPLOY_URL = `https://vercel.com/new/clone?repository-url=${encodeURIComponent(GITHUB_URL)}`;
 </script>
 
 <section class="cta-section cv-section" aria-labelledby="cta-heading" use:fadeIn>
@@ -14,8 +13,8 @@
 			<Button href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
 				Use Template on GitHub →
 			</Button>
-			<Button href={VERCEL_DEPLOY_URL} target="_blank" rel="noopener noreferrer" variant="outline">
-				Deploy to Vercel
+			<Button href="https://sveltekit-landing-page.loke.dev" target="_blank" rel="noopener noreferrer" variant="outline">
+				View live demo
 			</Button>
 		</div>
 	</div>

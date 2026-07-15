@@ -16,7 +16,7 @@
 		{
 			n: '3',
 			title: 'Customise & deploy',
-			desc: 'Edit the content, push to Vercel — live in 30 seconds.'
+			desc: 'Edit the content, deploy to Cloudflare Workers — live in seconds.'
 		}
 	];
 </script>
