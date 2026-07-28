@@ -6,7 +6,7 @@ A production-ready landing page template built with SvelteKit, Tailwind CSS v4, 
 
 ## Features
 
-- **Blazing Fast** — SSG + Vite 6. 100 Lighthouse score out of the box
+- **Blazing Fast** — SSG + Vite 8. 100 Lighthouse score out of the box
 - **Tailwind v4** — Design tokens in `@theme`, zero config file
 - **TypeScript** — Fully typed, Svelte 5 runes syntax throughout
 - **MDsveX Ready** — Add a blog in minutes
@@ -19,7 +19,7 @@ A production-ready landing page template built with SvelteKit, Tailwind CSS v4, 
 - [Tailwind CSS v4](https://tailwindcss.com)
 - [MDsveX](https://mdsvex.pngwn.io)
 - [TypeScript](https://typescriptlang.org)
-- [Vite 6](https://vitejs.dev)
+- [Vite 8](https://vite.dev)
 
 ## Get Started
 
@@ -29,6 +29,8 @@ cd sveltekit-landing-page-template
 pnpm install
 pnpm dev
 ```
+
+Requires Node.js 22.12+ and pnpm 11.17.0.
 
 ## Customise
 
@@ -40,6 +42,16 @@ pnpm dev
 ## Deploy
 
 [Live demo](https://sveltekit-landing-page.loke.dev)
+
+```bash
+pnpm ci-check
+pnpm test:e2e
+pnpm deploy:dry
+pnpm deploy
+```
+
+TypeScript 6 is intentional: it is the newest release currently supported by
+typescript-eslint.
 
 ## License
 

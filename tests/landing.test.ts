@@ -27,6 +27,7 @@ test.describe('Landing page', () => {
 		await page.locator('#features').scrollIntoViewIfNeeded();
 		await expect(page.getByRole('heading', { name: /everything you need/i })).toBeVisible();
 		await expect(page.locator('.feature-card')).toHaveCount(6);
+		await expect(page.getByText('Vite 8', { exact: true })).toBeVisible();
 	});
 
 	test('how-to-use section renders', async ({ page }) => {

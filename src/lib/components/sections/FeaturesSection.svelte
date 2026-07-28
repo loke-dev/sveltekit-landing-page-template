@@ -6,7 +6,7 @@
 		{
 			icon: '⚡',
 			title: 'Blazing Fast',
-			desc: 'SSG + Vite 6. 100 Lighthouse performance score out of the box.',
+			desc: 'SSG + Vite 8. 100 Lighthouse performance score out of the box.',
 			bg: 'rgba(217,30,83,0.06)',
 			border: 'rgba(217,30,83,0.18)'
 		},

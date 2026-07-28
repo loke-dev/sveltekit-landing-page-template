@@ -5,7 +5,6 @@
 	import type { Snippet } from 'svelte';
 
 	const { children }: { children: Snippet } = $props();
-
 </script>
 
 <a href="#main" class="skip-link">Skip to main content</a>

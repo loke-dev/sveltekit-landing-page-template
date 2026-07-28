@@ -13,7 +13,12 @@
 			<Button href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
 				Use Template on GitHub →
 			</Button>
-			<Button href="https://sveltekit-landing-page.loke.dev" target="_blank" rel="noopener noreferrer" variant="outline">
+			<Button
+				href="https://sveltekit-landing-page.loke.dev"
+				target="_blank"
+				rel="noopener noreferrer"
+				variant="outline"
+			>
 				View live demo
 			</Button>
 		</div>

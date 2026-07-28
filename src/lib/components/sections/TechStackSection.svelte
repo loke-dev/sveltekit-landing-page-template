@@ -30,7 +30,7 @@
 			border: 'rgba(74,222,128,0.25)'
 		},
 		{
-			label: 'Vite 6',
+			label: 'Vite 8',
 			bg: 'rgba(251,191,36,0.1)',
 			text: '#fbbf24',
 			border: 'rgba(251,191,36,0.25)'
